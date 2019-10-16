@@ -21,11 +21,10 @@ import matplotlib.pyplot as plt
 
  
 
-df = pd.read_csv("Admission_Values.csv")
+df = pd.read_csv("Student_Perf_Casted.csv")
+X = df[df.columns.difference(['Paper 7', 'Student_ID'])]
 
-X = df[df.columns.difference(['Chance of Admit ', 'Serial No.'])]
-
-Y=df['Chance of Admit ']
+Y=df['Paper 7']
 
  
 
@@ -69,161 +68,30 @@ app.layout = html.Div([
 
     html.Div([  
 
-    html.Label('GRE Score'),
+    html.Label('Paper 1'),
 
-    dcc.Slider(id='gre-slider',
+    dcc.Slider(id='Paper 1-slider',
 
-            min=0, max=340, step=1, value=170,
-
-               marks={
-
-        0: {'label': '0'},
-
-        100: {'label': '100'},
-
-        200: {'label': '200'},
-
-        300: {'label': '300'},
-
-        340: {'label': '340'}                                
-
-    }),
-
- 
-
-html.Br(),
-
-html.Label('TOEFL Score'),
-
-dcc.Slider(id='toefl-slider',
-
-            min=0, max=120, step=1, value=60,
+            min=0, max=100, step=1, value=10,
 
                marks={
 
         0: {'label': '0'},
-
-        25: {'label': '25'},
-
-        50: {'label': '50'},
-
-        75: {'label': '75'},
-
-        100: {'label': '100'},
-
-        120: {'label': '120'}                               
-
-    }),
-
- 
-
-html.Br(),
-
-html.Label('University Rating'),
-
-dcc.Slider(id='rating-slider',
-
-            min=0, max=5, step=1, value=3,
-
-               marks={
-
-        0: {'label': '0'},
-
-        1: {'label': '1'},
-
-        2: {'label': '2'},
-
-        3: {'label': '3'},
-
-        4: {'label': '4'},
-
-        5: {'label': '5'},
-
-                                
-
-    }),
-
- 
-
-html.Br(),
-
-html.Label('Statement of Purpose'),
-
-dcc.Slider(id='sop-slider',
-
-            min=0, max=5, step=1, value=3,
-
-               marks={
-
-        0: {'label': '0'},
-
-        1: {'label': '1'},
-
-        2: {'label': '2'},
-
-        3: {'label': '3'},
-
-        4: {'label': '4'},
-
-        5: {'label': '5'},
-
-                               
-
-    }),
-
- 
-
-html.Br(),
-
-html.Label('Letter of Recommendation'),
-
-dcc.Slider(id='lor-slider',
-
-            min=0, max=5, step=1, value=3,
-
-               marks={
-
-        0: {'label': '0'},
-
-        1: {'label': '1'},
-
-        2: {'label': '2'},
-
-        3: {'label': '3'},
-
-        4: {'label': '4'},
-
-        5: {'label': '5'},
-
-                                
-
-    }),
-
- 
-
-html.Br(),
-
-html.Label('College GPA'),
-
-dcc.Slider(id='gpa-slider',
-
-            min=0, max=10, step=1, value=5,
-
-               marks={
-
-        0: {'label': '0'},
-
-        2: {'label': '2'},
-
-        4: {'label': '4'},
-
-        6: {'label': '6'},
-
-       8: {'label': '8'},
 
         10: {'label': '10'},
 
-                               
+        20: {'label': '20'},
+
+        30: {'label': '30'},
+
+        40: {'label': '40'} 
+        
+        50: {'label': '50'}  
+        60: {'label': '60'}
+        70: {'label': '70'}  
+        80: {'label': '80'}
+        90: {'label': '90'} 
+        100: {'label': '100'}   
 
     }),
 
@@ -231,21 +99,156 @@ dcc.Slider(id='gpa-slider',
 
 html.Br(),
 
-html.Label('Research Experience'),
+  html.Label('Paper 2'),
 
-dcc.Slider(id='research-slider',
+    dcc.Slider(id='Paper 2-slider',
 
-            min=0, max=1, step=1, value=0,
+            min=0, max=100, step=1, value=10,
 
                marks={
 
         0: {'label': '0'},
 
-        1: {'label': '1'},
+        10: {'label': '10'},
 
-                               
+        20: {'label': '20'},
+
+        30: {'label': '30'},
+
+        40: {'label': '40'} 
+        
+        50: {'label': '50'}  
+        60: {'label': '60'}
+        70: {'label': '70'}  
+        80: {'label': '80'}
+        90: {'label': '90'} 
+        100: {'label': '100'}   
 
     }),
+
+ 
+
+html.Br(),
+
+  html.Label('Paper 3'),
+
+    dcc.Slider(id='Paper 3-slider',
+
+            min=0, max=100, step=1, value=10,
+
+               marks={
+
+        0: {'label': '0'},
+
+        10: {'label': '10'},
+
+        20: {'label': '20'},
+
+        30: {'label': '30'},
+
+        40: {'label': '40'} 
+        
+        50: {'label': '50'}  
+        60: {'label': '60'}
+        70: {'label': '70'}  
+        80: {'label': '80'}
+        90: {'label': '90'} 
+        100: {'label': '100'}   
+
+    }),
+
+ 
+
+html.Br(),
+  html.Label('Paper 4'),
+
+    dcc.Slider(id='Paper 4-slider',
+
+            min=0, max=100, step=1, value=10,
+
+               marks={
+
+        0: {'label': '0'},
+
+        10: {'label': '10'},
+
+        20: {'label': '20'},
+
+        30: {'label': '30'},
+
+        40: {'label': '40'} 
+        
+        50: {'label': '50'}  
+        60: {'label': '60'}
+        70: {'label': '70'}  
+        80: {'label': '80'}
+        90: {'label': '90'} 
+        100: {'label': '100'}   
+
+    }),
+
+ 
+
+html.Br(),
+  html.Label('Paper 5'),
+
+    dcc.Slider(id='Paper 5-slider',
+
+            min=0, max=100, step=1, value=10,
+
+               marks={
+
+        0: {'label': '0'},
+
+        10: {'label': '10'},
+
+        20: {'label': '20'},
+
+        30: {'label': '30'},
+
+        40: {'label': '40'} 
+        
+        50: {'label': '50'}  
+        60: {'label': '60'}
+        70: {'label': '70'}  
+        80: {'label': '80'}
+        90: {'label': '90'} 
+        100: {'label': '100'}   
+
+    }),
+
+ 
+
+html.Br(),
+
+  html.Label('Paper 6'),
+
+    dcc.Slider(id='Paper 6-slider',
+
+            min=0, max=100, step=1, value=10,
+
+               marks={
+
+        0: {'label': '0'},
+
+        10: {'label': '10'},
+
+        20: {'label': '20'},
+
+        30: {'label': '30'},
+
+        40: {'label': '40'} 
+        
+        50: {'label': '50'}  
+        60: {'label': '60'}
+        70: {'label': '70'}  
+        80: {'label': '80'}
+        90: {'label': '90'} 
+        100: {'label': '100'}   
+
+    }),
+ 
+
 
 ],className="pretty_container four columns"),
 
@@ -285,37 +288,33 @@ dcc.Slider(id='research-slider',
 
     Output('my-gauge', 'value'),
 
-    [Input('gre-slider', 'value'),
+    [Input('Paper 1-slider', 'value'),
 
-     Input('toefl-slider', 'value'),
+     Input('Paper 2-slider', 'value'),
 
-     Input('rating-slider', 'value'),
+     Input('Paper 3-slider', 'value'),
 
-     Input('sop-slider', 'value'),
+     Input('Paper 4-slider', 'value'),
 
-     Input('lor-slider', 'value'),
+     Input('Paper 5-slider', 'value'),
 
-     Input('gpa-slider', 'value'),
-
-     Input('research-slider', 'value')
+     Input('Paper 6-slider', 'value'),
 
      ])
 
-def update_output_div(gre,
+def update_output_div(Paper 1,
 
-                      toefl,
+                      Paper 2,
 
-                      rating,
+                      Paper 3,
 
-                      sop,
+                      Paper 4,
 
-                      lor,
+                      Paper 5,
 
-                      gpa,
+                      Paper 6,):
 
-                      research):
-
-   X_case =pd.DataFrame({'CGPA':[gpa],'GRE Score':[gre],'LOR':[lor],'Research':[research],'SOP':[sop],'TOEFL Score':[toefl],'University Rating':[rating]})
+   X_case =pd.DataFrame({'Paper 1':[Paper 1],'Paper 2':[Paper 2],'Paper 3':[Paper 3],'Paper 4':[Paper 4],'Paper 5':[Paper 5],'Paper 6':[Paper 6]})
 
    Y_case = regressor.predict(X_case)
 
