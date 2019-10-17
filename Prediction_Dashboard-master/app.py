@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Oct 17 16:43:37 2019
+
+@author: Kpshamir2109
+"""
+  
 # -*- coding: utf-8 -*-
 # -*- coding: utf-8 -*-
 
@@ -332,19 +340,19 @@ html.Br(),
 
      ])
 
-def update_output_div(Paper 1,
+def update_output_div(Paper1,
 
-                      Paper 2,
+                      Paper2,
 
-                      Paper 3,
+                      Paper3,
 
-                      Paper 4,
+                      Paper4,
 
-                      Paper 5,
+                      Paper5,
 
-                      Paper 6,):
+                      Paper6):
 
-   X_case =pd.DataFrame({'Paper 1':[Paper 1],'Paper 2':[Paper 2],'Paper 3':[Paper 3],'Paper 4':[Paper 4],'Paper 5':[Paper 5],'Paper 6':[Paper 6]})
+   X_case =pd.DataFrame({'Paper 1':[Paper1],'Paper 2':[Paper2],'Paper 3':[Paper3],'Paper 4':[Paper4],'Paper 5':[Paper5],'Paper 6':[Paper6]})
 
    Y_case = regressor.predict(X_case)
 
@@ -359,3 +367,4 @@ def update_output_div(Paper 1,
 if __name__ == '__main__':
 
     app.run_server()
+
