@@ -70,7 +70,7 @@ app.layout = html.Div([
 
        
 
-    html.H1('Master Program Acceptance Predictor'),
+    html.H1('Paper 7 Score Predictor'),
 
        
 
@@ -306,11 +306,11 @@ html.Br(),
 
         label="Probability",
 
-        max=1,
+        max=100,
 
         min=0,
 
-        value=1
+        value=10
 
     ),
 
